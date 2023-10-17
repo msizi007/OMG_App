@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block title %}View Bookings{% endblock %}
+
+{% block style %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        /* Style for the main navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333; /* Background color for the navigation bar */
+            color: white; /* Text color for the navigation links */
+            padding: 10px 20px; /* Padding for the navigation bar */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px; /* Spacing between navigation items */
+        }
+
+        /* Style for links */
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Style for links on hover */
+        .navbar a:hover {
+            color: #FF5733; /* Change this to your preferred hover color */
+        }
+
+
+        .appointments-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .appointments-table th,
+        .appointments-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .appointments-table th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .appointments-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .appointments-table tbody tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Add the button styles */
+        .cancel-button {
+            background-color: #ff3333; /* Red color */
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 2px;
+            cursor: pointer;
+        }
+        /* User Profile Div */
+        .user-profile {
+            text-align: center;
+        }
+
+        .user-profile img {
+            width: 100px; /* Adjust the size of the profile icon */
+            border-radius: 50%; /* Make the image rounded */
+            margin-bottom: 10px;
+        }
+
+        .user-profile p {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* Styling for the confirmation dialog */
+        .confirmation-dialog {
+            display: none;
+            background-color: #fff;
+            width: 300px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .confirmation-dialog h2 {
+            margin-top: 0;
+        }
+
+        .confirmation-dialog button {
+            margin: 10px;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+</div>
+    <table class="appointments-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Schedule Date</th>
+                <th>Schedule Time</th>
+                <th>Service</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add your appointment data rows here -->
+            <tr>
+                <td>1</td>
+                <td>2023-10-10</td>
+                <td>10:00 AM</td>
+                <td>2023-10-08</td>
+                <td>03:00 PM</td>
+                <td>Haircut</td>
+                <td>$20</td>
+                <td>
+                    <button class="cancel-button" onclick="showConfirmationDialog()">Cancel Appointment</button>
+                </td>
+            </tr>
+            <!-- Add more appointment data rows as needed -->
+        </tbody>
+    </table>
+
+    <!-- Confirmation Dialog -->
+    <div class="confirmation-dialog" id="confirmationDialog">
+        <h2>Are you sure you want to cancel this appointment?</h2>
+        <button class="cancel-button" onclick="cancelAppointment()">Yes</button>
+        <button class="cancel-button" onclick="hideConfirmationDialog()">No</button>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        // JavaScript functions to show and hide the confirmation dialog
+        function showConfirmationDialog() {
+            var dialog = document.getElementById('confirmationDialog');
+            dialog.style.display = 'block';
+        }
+
+        function hideConfirmationDialog() {
+            var dialog = document.getElementById('confirmationDialog');
+            dialog.style.display = 'none';
+        }
+
+        function cancelAppointment() {
+            // Add your logic here to cancel the appointment
+            // For example, you can make an API call to cancel the appointment
+            // Once canceled, you can hide the confirmation dialog
+            hideConfirmationDialog();
+        }
+    </script>
+{% endblock %}

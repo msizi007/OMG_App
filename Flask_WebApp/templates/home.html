@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block title %}Home: OMG Barber{% endblock %}
+
+{% block style %}
+    <style>
+        /* Style for the main navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333; /* Background color for the navigation bar */
+            color: white; /* Text color for the navigation links */
+            padding: 10px 20px; /* Padding for the navigation bar */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px; /* Spacing between navigation items */
+        }
+
+        /* Style for links */
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Style for links on hover */
+        .navbar a:hover {
+            color: #FF5733; /* Change this to your preferred hover color */
+        }
+
+        /* Style for the main container */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .btn.btn-green {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underlines */
+    font-weight: bold;
+    }
+    .btn.btn-green:hover {
+    background-color: #45a049; /* Darker green on hover */
+    }
+    .btn.btn-bluish {
+    background-color: #0063e6; /* Blue background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underlines */
+    font-weight: bold;
+    }
+    .btn.btn-bluish:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    }
+    fieldset {
+    border: 2px solid #4CAF50; /* Border color and thickness */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the fieldset */
+    margin: 20px 0; /* Margin around the fieldset */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    }
+    legend {
+    font-weight: bold;
+    color: #4CAF50; /* Legend text color */
+    padding: 5px 10px; /* Legend padding */
+    border: 1px solid #4CAF50; /* Legend border */
+    border-radius: 5px; /* Rounded corners for legend */
+    background-color: white; /* Background color for legend */
+}
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <!-- Your content goes here -->
+        <h1>Welcome to OMG</h1>
+        <p>We provide top-notch barber services.</p>
+    </div>
+    <div class="container">
+        <a href="/BookAppointment" class="btn btn-green">Book Now!</a>
+    </div>
+    
+    <div class="container">
+        <fieldset>
+            <legend>What We Provide?</legend>
+            <p>At OMG Barber, we offer more than just haircuts – we provide an experience tailored to you. Step into our world of style and precision, where our skilled barbers transform hair into works of art. From classic cuts to contemporary trends, we cater to your unique style. Our relaxing atmosphere and attention to detail ensure you leave feeling confident and refreshed. Explore our range of services, and let us elevate your grooming journey. Discover the essence of exceptional barbering at OMG Barber</p>
+            <a href="#" class="btn btn-bluish">View Services</a>
+        </fieldset>
+    </div>
+{% endblock %}

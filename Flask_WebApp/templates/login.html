@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block style %}
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Style for the main navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333; /* Background color for the navigation bar */
+            color: white; /* Text color for the navigation links */
+            padding: 10px 20px; /* Padding for the navigation bar */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px; /* Spacing between navigation items */
+        }
+
+        /* Style for links */
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Style for links on hover */
+        .navbar a:hover {
+            color: #FF5733; /* Change this to your preferred hover color */
+        }
+        
+        .container {
+            width: 20%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .signup-link:hover {
+            color: #4CAF50;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Login</h2>
+        <form action="#" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <p style="color: red;">{{errorMessage}}</p>
+            <input type="submit" value="Login">
+        </form>
+        Don't have an account? <a href="/signup" class="signup-link">Sign up instead</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,67 @@
+/* Style for the main navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Background color for the navigation bar */
+    color: white; /* Text color for the navigation links */
+    padding: 10px 20px; /* Padding for the navigation bar */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px; /* Spacing between navigation items */
+}
+
+/* Style for links */
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Style for links on hover */
+.navbar a:hover {
+    color: #FF5733; /* Change this to your preferred hover color */
+}
+
+/* Style for the main container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+.btn.btn-green {
+background-color: #4CAF50; /* Green background color */
+color: white; /* Text color */
+padding: 10px 20px; /* Padding */
+border: none; /* Remove the border */
+border-radius: 5px; /* Rounded corners */
+text-decoration: none; /* Remove underlines */
+font-weight: bold;
+}
+.btn.btn-green:hover {
+background-color: #45a049; /* Darker green on hover */
+}
+fieldset {
+border: 2px solid #4CAF50; /* Border color and thickness */
+border-radius: 10px; /* Rounded corners */
+padding: 20px; /* Padding inside the fieldset */
+margin: 20px 0; /* Margin around the fieldset */
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+legend {
+font-weight: bold;
+color: #4CAF50; /* Legend text color */
+padding: 5px 10px; /* Legend padding */
+border: 1px solid #4CAF50; /* Legend border */
+border-radius: 5px; /* Rounded corners for legend */
+background-color: white; /* Background color for legend */
+}

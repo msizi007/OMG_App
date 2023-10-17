@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}About OMG Barber Service{% endblock %}
+
+{% block style %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .about-text {
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+        }
+
+        /* Add more CSS to style your page as desired */
+        /* Style for the main navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333; /* Background color for the navigation bar */
+            color: white; /* Text color for the navigation links */
+            padding: 10px 20px; /* Padding for the navigation bar */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px; /* Spacing between navigation items */
+        }
+
+        /* Style for links */
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Style for links on hover */
+        .navbar a:hover {
+            color: #FF5733; /* Change this to your preferred hover color */
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="header">
+        <h1>About OMG Barber Service</h1>
+    </div>
+    <div class="container">
+        <img class="about-image" src="barber-image.jpg" alt="OMG Barber Service">
+        <p class="about-text">
+            Welcome to OMG Barber Service! We are dedicated to providing top-notch barber services to our valued clients. Our team of skilled barbers is committed to delivering the best haircuts and grooming experiences. Whether you're looking for a classic haircut or a trendy style, we've got you covered.
+        </p>
+        <p class="about-text">
+            Our barbers are not just professionals; they are passionate artists who take pride in their craft. We create more than just haircuts; we create confidence and style. Visit us and experience the difference with OMG Barber Service.
+        </p>
+        <div class="contact-info">
+            <p>Contact us at <a href="tel:123-456-7890">123-456-7890</a> or via email at <a href="mailto:info@omgbarberservice.com">info@omgbarberservice.com</a>.</p>
+        </div>
+    </div>
+{% endblock %}
