@@ -32,9 +32,7 @@ def signup():
         AddCustomer(fname, lname, phoneNum, email, address)
         AddUser(username, password)
         customer_obj = Customer(fname, lname, email, phoneNum, address)
-        CloseDatabase()
         cust_num = getCustomerNumber(customer_obj)[0]
-        CloseDatabase()
         # customer dictionary object
         cust_dict = {'ID': cust_num,'fname': fname, 'lname': lname, 'email': email, 'phone': phoneNum, 'address': address}
         session['logged-in'] = True
@@ -54,7 +52,6 @@ def login():
         User = Login(username, password)
         cust_num = getCustomerNumber(User)[0]
         fname, lname, email, phone, address = User.first_name, User.last_name, User.email, User.phoneNum, User.address
-        CloseDatabase()
         # customer dict
         cust_dict = {'ID': cust_num,'fname': fname, 'lname': lname, 'email': email, 'phone': phone, 'address': address}
         if User:

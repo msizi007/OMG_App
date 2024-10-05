@@ -1,9 +1,0 @@
-{
-    "version": 2,
-    "builds": [
-        {"src": "Flask_WebApp/main.py", "use": "@vercel/python"}
-    ],
-    "routes": [
-        {"src": "/(.*)", "dest": "Flask_WebApp/main.py"}
-    ]
-}
