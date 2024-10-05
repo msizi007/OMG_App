@@ -1,5 +1,5 @@
 from flask import Flask, request, url_for, render_template, flash, session, redirect
-from database import *
+
 from appointment import Appointment
 from customer import Customer
 from service import ALL_SERVICES
